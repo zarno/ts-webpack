@@ -6,13 +6,11 @@ const config = {
   devtool: 'inline-source-map',
   entry: './src/index.ts',
   devServer: {
-    open: true,
-    hot: true,
     contentBase: path.join(__dirname, 'dist'),
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'engine.bundle.js',
+    filename: 'bundle.js',
   },
   resolve: {
     // Add `.ts` and `.tsx` as a resolvable extension.
@@ -24,7 +22,11 @@ const config = {
       { test: /\.tsx?$/, loader: 'ts-loader' },
     ],
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+  ],
 };
 
 module.exports = config;
