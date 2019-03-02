@@ -8,10 +8,12 @@
   "private": false,
   "repository": "github:zarno/TS-Webpack.git",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "test": "jest"
   },
   "devDependencies": {
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.1.0",
     "ts-loader": "^5.3.3",
     "typescript": "^3.3.3333",
     "webpack": "^4.29.5",
