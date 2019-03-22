@@ -8,6 +8,7 @@
   "private": false,
   "repository": "github:zarno/TS-Webpack.git",
   "scripts": {
+    "build": "webpack",
     "start": "webpack-dev-server",
     "test": "jest"
   },
